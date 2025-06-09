@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Play, Clock, CheckCircle, Users, Star, Download, MessageCircle, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -83,7 +82,23 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="px-4 py-8 text-center mt-16 animate-fade-in">
-        <div className="max-w-4xl mx-auto">          
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold text-emerald-800 mb-4 animate-fade-in">
+            Stock Market Foundation Program
+          </h1>
+          <h2 className="text-xl md:text-2xl text-emerald-600 mb-8 animate-fade-in">
+            A Complete Course on the Stock Market
+          </h2>
+          
+          {/* Hero Image */}
+          <div className="mb-8 flex justify-center">
+            <img 
+              src="/lovable-uploads/fc953a32-347e-4939-a68a-5857c9ed0de0.png" 
+              alt="Stock Market Foundation Program" 
+              className="max-w-full h-auto rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          
           <div className="grid grid-cols-2 gap-4 mb-8">
             <Card className="bg-emerald-50 border-emerald-200 hover:shadow-lg transition-shadow duration-300 hover:scale-105 transform">
               <CardContent className="p-4 text-center">
@@ -350,40 +365,27 @@ const Index = () => {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-8 text-emerald-800 animate-fade-in">Students' Testimonials</h2>
           
-          <Card className="bg-white border-emerald-200 cursor-pointer hover:shadow-xl transition-all duration-300 transform hover:scale-105 mb-6"
-                onClick={() => window.open('https://www.youtube.com/playlist?list=PLWTjbls1JHiFSAiVtJtpnP7iZ12hdFJ2e', '_blank')}>
-            <CardContent className="p-6">
-              <div className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden mb-4">
-                <img 
-                  src="https://img.youtube.com/vi/playlist?list=PLWTjbls1JHiFSAiVtJtpnP7iZ12hdFJ2e/maxresdefault.jpg" 
-                  alt="Student Testimonials Playlist" 
-                  className="w-full h-full object-cover"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = "https://via.placeholder.com/640x360/10b981/ffffff?text=Student+Testimonials";
-                  }}
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-                  <Play className="w-16 h-16 text-white drop-shadow-lg" />
-                </div>
-              </div>
-              <p className="text-gray-600">Watch Success Stories from Our Students</p>
-            </CardContent>
-          </Card>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((_, index) => (
-              <Card key={index} className="bg-white border-emerald-200 hover:shadow-md transition-shadow duration-300">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              { url: "https://www.youtube.com/watch?v=4EbvPU88plE", id: "4EbvPU88plE", title: "Student Success Story 1" },
+              { url: "https://www.youtube.com/watch?v=MBVVSQIK2j0", id: "MBVVSQIK2j0", title: "Student Success Story 2" },
+              { url: "https://www.youtube.com/watch?v=BSsQvGBRrTo", id: "BSsQvGBRrTo", title: "Student Success Story 3" },
+              { url: "https://www.youtube.com/watch?v=XQDuxsVveKk", id: "XQDuxsVveKk", title: "Student Success Story 4" }
+            ].map((video, index) => (
+              <Card key={index} className="bg-white border-emerald-200 cursor-pointer hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                    onClick={() => window.open(video.url, '_blank')}>
                 <CardContent className="p-4">
-                  <div className="flex items-center justify-center mb-3">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
+                  <div className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden mb-3">
+                    <img 
+                      src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`} 
+                      alt={video.title} 
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                      <Play className="w-12 h-12 text-white drop-shadow-lg" />
+                    </div>
                   </div>
-                  <p className="text-gray-600 text-sm italic">
-                    "Excellent program! The content is very comprehensive and easy to understand. Highly recommended for beginners."
-                  </p>
-                  <p className="text-emerald-700 text-sm mt-2 font-semibold">- Student {index + 1}</p>
+                  <p className="text-center text-gray-700 font-semibold">{video.title}</p>
                 </CardContent>
               </Card>
             ))}
