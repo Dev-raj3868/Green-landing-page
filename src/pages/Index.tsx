@@ -37,12 +37,11 @@ const Index = () => {
       {/* Hero Section */}
       <section className="px-4 py-8 text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-emerald-300 to-green-200 bg-clip-text text-transparent">
-            Stock Market Foundation Program
-          </h1>
-          <p className="text-xl md:text-2xl mb-6 text-emerald-100">
-            A Complete Course on the Stock Market
-          </p>
+          <img 
+            src="/lovable-uploads/e0edab60-4b07-45c1-b824-4beacba0151f.png" 
+            alt="Stock Market Foundation Program" 
+            className="w-full max-w-md mx-auto mb-6"
+          />
           
           <div className="grid grid-cols-2 gap-4 mb-8">
             <Card className="bg-emerald-800/50 border-emerald-600">
@@ -136,8 +135,12 @@ const Index = () => {
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold text-emerald-300 mb-2">Sanjay Saraf Sir</h3>
                 <p className="text-emerald-200 text-sm mb-4">(CFA, FRM, MS-FINANCE, CTM, CPM, CIB, CIIA)</p>
-                <div className="w-32 h-32 bg-emerald-800 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <Users className="w-16 h-16 text-emerald-300" />
+                <div className="mx-auto mb-4 flex items-center justify-center">
+                  <img 
+                    src="/lovable-uploads/d4d0d310-56b1-4c0b-aa01-c9205128432b.png" 
+                    alt="Sanjay Saraf" 
+                    className="rounded-full w-32 h-32 object-cover border-4 border-emerald-500"
+                  />
                 </div>
               </div>
               
@@ -151,10 +154,29 @@ const Index = () => {
                   <h5 className="font-semibold text-emerald-300 mb-2">Key Achievements:</h5>
                   <ul className="text-sm space-y-1">
                     <li>• SEBI-registered Research Analyst (Registration No INH000013882)</li>
-                    <li>• Gold Medal recipient honored by PM Dr. Manmohan Singh</li>
+                    <li className="flex items-start space-x-2">
+                      <span>•</span>
+                      <span className="flex-1">Gold Medal recipient honored by PM Dr. Manmohan Singh</span>
+                      <img 
+                        src="/lovable-uploads/1c16ac99-aaaf-4913-b737-25f39a10c1fe.png" 
+                        alt="Gold Medal Award" 
+                        className="w-16 h-16 object-cover rounded-md"
+                      />
+                    </li>
                     <li>• Multiple prestigious certifications (CFA, FRM, CIIA, CPM, CTM, CIB)</li>
                     <li>• MS Finance from ICFAI, Hyderabad</li>
                   </ul>
+                </div>
+
+                <div className="bg-emerald-800/50 p-4 rounded-lg">
+                  <h5 className="font-semibold text-emerald-300 mb-2">SEBI Registered Research Analyst:</h5>
+                  <div className="flex justify-center">
+                    <img 
+                      src="/lovable-uploads/ce71541f-6baa-4f76-94d8-95386fc5ec7f.png" 
+                      alt="SEBI Certificate" 
+                      className="w-full max-w-xs object-contain rounded-md"
+                    />
+                  </div>
                 </div>
               </div>
             </CardContent>
@@ -165,8 +187,12 @@ const Index = () => {
             <CardContent className="p-6">
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold text-emerald-300 mb-2">Guddu Kumar Sir (G.K. Shaw)</h3>
-                <div className="w-32 h-32 bg-emerald-800 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <Users className="w-16 h-16 text-emerald-300" />
+                <div className="mx-auto mb-4 flex items-center justify-center">
+                  <img 
+                    src="/lovable-uploads/f697f466-43b2-46d4-aa7d-8ae126d6895d.png" 
+                    alt="Guddu Kumar Sir" 
+                    className="rounded-full w-32 h-32 object-cover border-4 border-emerald-500"
+                  />
                 </div>
               </div>
               
@@ -305,13 +331,12 @@ const Index = () => {
           <h2 className="text-3xl font-bold mb-8 text-emerald-300">Certificate</h2>
           <Card className="bg-emerald-800/30 border-emerald-600">
             <CardContent className="p-8">
-              <div className="w-64 h-48 bg-emerald-800 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-emerald-300 rounded-full mx-auto mb-2 flex items-center justify-center">
-                    <CheckCircle className="w-8 h-8 text-emerald-900" />
-                  </div>
-                  <p className="text-emerald-300 font-bold">Certificate of Completion</p>
-                </div>
+              <div className="mx-auto mb-4 flex items-center justify-center">
+                <img 
+                  src="/lovable-uploads/c1038b2f-0008-4e5b-b0b4-66d4ef18149a.png" 
+                  alt="Certificate of Completion" 
+                  className="w-full max-w-md rounded-lg shadow-lg"
+                />
               </div>
               <p className="text-emerald-200">
                 Get a verified certificate upon successful completion of the program
