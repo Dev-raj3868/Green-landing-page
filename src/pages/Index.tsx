@@ -19,7 +19,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white text-gray-800">
+    <div className="min-h-screen bg-background text-foreground">
       <Navbar onNavigate={scrollToSection} />
       
       <HeroSection />
@@ -31,9 +31,9 @@ const Index = () => {
       <ExpertsSection />
 
       {/* Program Highlights */}
-      <section id="highlights" className="px-4 py-8 md:py-12 bg-gray-50">
+      <section id="highlights" className="px-4 py-8 md:py-12 bg-secondary">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-emerald-800 animate-fade-in">Program Highlights</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-primary animate-fade-in">Program Highlights</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
@@ -51,9 +51,9 @@ const Index = () => {
               "Multiple Market Segments",
               "Doubt-Solving Support"
             ].map((highlight, index) => (
-              <div key={index} className="flex items-center space-x-3 bg-white p-3 md:p-4 rounded-lg border border-emerald-200 hover:shadow-lg transition-all duration-300 hover:scale-105 transform group">
-                <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
-                <span className="text-gray-700 text-sm md:text-base group-hover:text-emerald-700 transition-colors duration-300">{highlight}</span>
+              <div key={index} className="flex items-center space-x-3 bg-card p-3 md:p-4 rounded-lg border border-border hover:shadow-lg transition-all duration-300 hover:scale-105 transform group">
+                <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
+                <span className="text-foreground text-sm md:text-base group-hover:text-primary transition-colors duration-300">{highlight}</span>
               </div>
             ))}
           </div>
@@ -61,9 +61,9 @@ const Index = () => {
       </section>
 
       {/* Demo Sessions */}
-      <section id="demos" className="px-4 py-8 md:py-12 bg-white">
+      <section id="demos" className="px-4 py-8 md:py-12 bg-background">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-emerald-800 animate-fade-in">Demo Sessions</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-primary animate-fade-in">Demo Sessions</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
@@ -71,20 +71,20 @@ const Index = () => {
               { url: "https://www.youtube.com/watch?v=0z5XP4mVZrg", id: "0z5XP4mVZrg" }, 
               { url: "https://www.youtube.com/watch?v=yF_XihERwuM", id: "yF_XihERwuM" }
             ].map((video, index) => (
-              <Card key={index} className="bg-white border-emerald-200 cursor-pointer hover:shadow-xl transition-all duration-500 transform hover:scale-105 group"
+              <Card key={index} className="bg-card border-border cursor-pointer hover:shadow-xl transition-all duration-500 transform hover:scale-105 group"
                     onClick={() => window.open(video.url, '_blank')}>
                 <CardContent className="p-4">
-                  <div className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden mb-3">
+                  <div className="relative aspect-video bg-muted rounded-lg overflow-hidden mb-3">
                     <img 
                       src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`} 
                       alt={`Demo Session ${index + 1}`} 
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center group-hover:bg-opacity-20 transition-all duration-300">
-                      <Play className="w-8 md:w-12 h-8 md:h-12 text-white drop-shadow-lg group-hover:scale-125 transition-transform duration-300" />
+                      <Play className="w-8 md:w-12 h-8 md:h-12 text-primary drop-shadow-lg group-hover:scale-125 transition-transform duration-300" />
                     </div>
                   </div>
-                  <p className="text-center text-gray-700 font-semibold text-sm md:text-base group-hover:text-emerald-700 transition-colors duration-300">Demo Session {index + 1}</p>
+                  <p className="text-center text-foreground font-semibold text-sm md:text-base group-hover:text-primary transition-colors duration-300">Demo Session {index + 1}</p>
                 </CardContent>
               </Card>
             ))}
@@ -96,9 +96,9 @@ const Index = () => {
       <CTASection />
 
       {/* Students Testimonials */}
-      <section id="testimonials" className="px-4 py-8 md:py-12 bg-gray-50">
+      <section id="testimonials" className="px-4 py-8 md:py-12 bg-secondary">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-emerald-800 animate-fade-in">Students' Testimonials</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-primary animate-fade-in">Students' Testimonials</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
@@ -107,20 +107,20 @@ const Index = () => {
               { url: "https://www.youtube.com/watch?v=BSsQvGBRrTo", id: "BSsQvGBRrTo", title: "Student Success Story 3" },
               { url: "https://www.youtube.com/watch?v=XQDuxsVveKk", id: "XQDuxsVveKk", title: "Student Success Story 4" }
             ].map((video, index) => (
-              <Card key={index} className="bg-white border-emerald-200 cursor-pointer hover:shadow-xl transition-all duration-500 transform hover:scale-105 group"
+              <Card key={index} className="bg-card border-border cursor-pointer hover:shadow-xl transition-all duration-500 transform hover:scale-105 group"
                     onClick={() => window.open(video.url, '_blank')}>
                 <CardContent className="p-4">
-                  <div className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden mb-3">
+                  <div className="relative aspect-video bg-muted rounded-lg overflow-hidden mb-3">
                     <img 
                       src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`} 
                       alt={video.title} 
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center group-hover:bg-opacity-20 transition-all duration-300">
-                      <Play className="w-8 md:w-12 h-8 md:h-12 text-white drop-shadow-lg group-hover:scale-125 transition-transform duration-300" />
+                      <Play className="w-8 md:w-12 h-8 md:h-12 text-primary drop-shadow-lg group-hover:scale-125 transition-transform duration-300" />
                     </div>
                   </div>
-                  <p className="text-center text-gray-700 font-semibold text-sm md:text-base group-hover:text-emerald-700 transition-colors duration-300">{video.title}</p>
+                  <p className="text-center text-foreground font-semibold text-sm md:text-base group-hover:text-primary transition-colors duration-300">{video.title}</p>
                 </CardContent>
               </Card>
             ))}
@@ -129,10 +129,10 @@ const Index = () => {
       </section>
 
       {/* Certificate Section */}
-      <section className="px-4 py-8 md:py-12 bg-white">
+      <section className="px-4 py-8 md:py-12 bg-background">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-emerald-800 animate-fade-in">Certificate</h2>
-          <Card className="bg-white border-emerald-200 shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-primary animate-fade-in">Certificate</h2>
+          <Card className="bg-card border-border shadow-lg hover:shadow-xl transition-all duration-500 transform hover:scale-105">
             <CardContent className="p-6 md:p-8">
               <div className="mx-auto mb-4 flex items-center justify-center">
                 <img 
@@ -141,7 +141,7 @@ const Index = () => {
                   className="w-full max-w-md rounded-lg shadow-lg hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <p className="text-gray-600 text-sm md:text-base">
+              <p className="text-muted-foreground text-sm md:text-base">
                 Get a verified certificate upon successful completion of the program
               </p>
             </CardContent>
@@ -150,11 +150,11 @@ const Index = () => {
       </section>
 
       {/* Who Can Join */}
-      <section className="px-4 py-8 md:py-12 bg-gray-50">
+      <section className="px-4 py-8 md:py-12 bg-secondary">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-emerald-800 animate-fade-in">Who Can Join This Program?</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-primary animate-fade-in">Who Can Join This Program?</h2>
           
-          <p className="text-gray-600 text-center mb-8 text-sm md:text-base">
+          <p className="text-muted-foreground text-center mb-8 text-sm md:text-base">
             This program is designed for anyone who wants to build a solid foundation in the stock market, whether you're a complete beginner or someone looking to strengthen your basics.
           </p>
           
@@ -169,9 +169,9 @@ const Index = () => {
               "Anyone confused by market noise and seeking a clear approach",
               "Self-learners who need structured mentorship"
             ].map((item, index) => (
-              <div key={index} className="flex items-start space-x-3 bg-white p-3 md:p-4 rounded-lg border border-emerald-200 hover:shadow-lg transition-all duration-300 hover:scale-105 transform group">
-                <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-300" />
-                <span className="text-gray-700 text-xs md:text-sm group-hover:text-emerald-700 transition-colors duration-300">{item}</span>
+              <div key={index} className="flex items-start space-x-3 bg-card p-3 md:p-4 rounded-lg border border-border hover:shadow-lg transition-all duration-300 hover:scale-105 transform group">
+                <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-300" />
+                <span className="text-foreground text-xs md:text-sm group-hover:text-primary transition-colors duration-300">{item}</span>
               </div>
             ))}
           </div>
@@ -179,33 +179,33 @@ const Index = () => {
       </section>
 
       {/* Why Trading and Investment */}
-      <section className="px-4 py-8 md:py-12 bg-white">
+      <section className="px-4 py-8 md:py-12 bg-background">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-emerald-800 animate-fade-in">Why Trading and Investment?</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-primary animate-fade-in">Why Trading and Investment?</h2>
           
-          <Card className="bg-white border-emerald-200 cursor-pointer hover:shadow-xl transition-all duration-500 transform hover:scale-105 group"
+          <Card className="bg-card border-border cursor-pointer hover:shadow-xl transition-all duration-500 transform hover:scale-105 group"
                 onClick={() => window.open('https://youtu.be/TzGnw8Ujxeg', '_blank')}>
             <CardContent className="p-4 md:p-6">
-              <div className="relative aspect-video bg-gray-200 rounded-lg overflow-hidden mb-4">
+              <div className="relative aspect-video bg-muted rounded-lg overflow-hidden mb-4">
                 <img 
                   src="https://img.youtube.com/vi/TzGnw8Ujxeg/maxresdefault.jpg" 
                   alt="Why Trading and Investment" 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center group-hover:bg-opacity-20 transition-all duration-300">
-                  <Play className="w-12 md:w-16 h-12 md:h-16 text-white drop-shadow-lg group-hover:scale-125 transition-transform duration-300" />
+                  <Play className="w-12 md:w-16 h-12 md:h-16 text-primary drop-shadow-lg group-hover:scale-125 transition-transform duration-300" />
                 </div>
               </div>
-              <p className="text-gray-600 text-sm md:text-base">Watch Sanjay Saraf Sir explain the importance of trading and investment</p>
+              <p className="text-muted-foreground text-sm md:text-base">Watch Sanjay Saraf Sir explain the importance of trading and investment</p>
             </CardContent>
           </Card>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section id="faq" className="px-4 py-8 md:py-12 bg-gray-50">
+      <section id="faq" className="px-4 py-8 md:py-12 bg-secondary">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-emerald-800 animate-fade-in">Frequently Asked Questions</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-primary animate-fade-in">Frequently Asked Questions</h2>
           
           <div className="space-y-4">
             {[
@@ -230,10 +230,10 @@ const Index = () => {
                 a: "Yes, the course is compatible with all major devices — mobile phones, laptops, tablets, Windows PCs, MacBooks, Android, and iOS."
               }
             ].map((faq, index) => (
-              <Card key={index} className="bg-white border-emerald-200 hover:shadow-lg transition-all duration-300 hover:scale-105 transform group">
+              <Card key={index} className="bg-card border-border hover:shadow-lg transition-all duration-300 hover:scale-105 transform group">
                 <CardContent className="p-4 md:p-6">
-                  <h3 className="text-emerald-800 font-semibold mb-3 text-sm md:text-base group-hover:text-emerald-900 transition-colors duration-300">{faq.q}</h3>
-                  <p className="text-gray-600 text-xs md:text-sm group-hover:text-gray-700 transition-colors duration-300">{faq.a}</p>
+                  <h3 className="text-primary font-semibold mb-3 text-sm md:text-base group-hover:text-primary/80 transition-colors duration-300">{faq.q}</h3>
+                  <p className="text-muted-foreground text-xs md:text-sm group-hover:text-foreground transition-colors duration-300">{faq.a}</p>
                 </CardContent>
               </Card>
             ))}
@@ -242,20 +242,20 @@ const Index = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="px-4 py-8 md:py-12 bg-gradient-to-r from-emerald-600 to-green-600 text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-600/90 to-green-600/90"></div>
+      <section className="px-4 py-8 md:py-12 bg-gradient-dark-green text-primary-foreground relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-dark-green opacity-90"></div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h3 className="text-2xl md:text-3xl font-bold mb-6 animate-bounce">Ready to Start Your Stock Market Journey?</h3>
           <div className="text-4xl md:text-5xl font-bold mb-6 animate-pulse">
-            <span className="line-through text-emerald-200">₹9,999</span>
-            <span className="text-white ml-2">₹999/-</span>
+            <span className="line-through text-primary-foreground/70">₹9,999</span>
+            <span className="text-primary-foreground ml-2">₹999/-</span>
           </div>
           
-          <p className="text-emerald-100 mb-8 text-base md:text-lg animate-pulse">Offer Ending Soon!</p>
+          <p className="text-primary-foreground/80 mb-8 text-base md:text-lg animate-pulse">Offer Ending Soon!</p>
           
           <Button 
             onClick={handleEnrollNow}
-            className="bg-white text-emerald-600 hover:bg-gray-100 px-8 md:px-12 py-3 md:py-4 text-lg md:text-xl font-bold rounded-full shadow-xl transform hover:scale-105 transition-all duration-300 hover:shadow-2xl"
+            className="bg-background text-primary hover:bg-card px-8 md:px-12 py-3 md:py-4 text-lg md:text-xl font-bold rounded-full shadow-xl transform hover:scale-105 transition-all duration-300 hover:shadow-2xl"
           >
             Enroll Now - Limited Time Offer!
           </Button>
