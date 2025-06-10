@@ -24,17 +24,17 @@ export const Navbar = ({ onNavigate }: NavbarProps) => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-emerald-900 text-white z-50 shadow-lg">
+    <nav className="fixed top-0 left-0 right-0 bg-card text-foreground z-50 shadow-lg border-b border-border">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <div className="text-xl font-bold hover:text-emerald-300 transition-colors duration-300">
+          <div className="text-xl font-bold hover:text-primary transition-colors duration-300">
             SSEI Markets
           </div>
           
           {/* Mobile menu button */}
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 hover:bg-emerald-800 rounded-lg transition-colors duration-300 transform hover:scale-105"
+            className="md:hidden p-2 hover:bg-accent rounded-lg transition-colors duration-300 transform hover:scale-105"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -45,10 +45,10 @@ export const Navbar = ({ onNavigate }: NavbarProps) => {
               <button 
                 key={item.id}
                 onClick={() => handleNavigation(item.id)} 
-                className="hover:text-emerald-300 transition-colors duration-300 relative group"
+                className="hover:text-primary transition-colors duration-300 relative group"
               >
                 {item.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-emerald-300 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
               </button>
             ))}
           </div>
@@ -56,13 +56,13 @@ export const Navbar = ({ onNavigate }: NavbarProps) => {
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-emerald-800 animate-fade-in">
+          <div className="md:hidden bg-accent animate-fade-in">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {menuItems.map((item) => (
                 <button 
                   key={item.id}
                   onClick={() => handleNavigation(item.id)} 
-                  className="block w-full text-left px-3 py-2 hover:bg-emerald-700 rounded transition-colors duration-300 transform hover:translate-x-1"
+                  className="block w-full text-left px-3 py-2 hover:bg-secondary rounded transition-colors duration-300 transform hover:translate-x-1"
                 >
                   {item.label}
                 </button>

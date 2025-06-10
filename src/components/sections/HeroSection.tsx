@@ -3,12 +3,12 @@ import { Card, CardContent } from '@/components/ui/card';
 
 export const HeroSection = () => {
   return (
-    <section className="px-4 py-8 text-center mt-16 animate-fade-in">
+    <section className="px-4 py-8 text-center mt-16 animate-fade-in bg-background">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-3xl md:text-5xl font-bold text-emerald-800 mb-4 animate-scale-in">
+        <h1 className="text-3xl md:text-5xl font-bold text-primary mb-4 animate-scale-in">
           Stock Market Foundation Program
         </h1>
-        <h2 className="text-lg md:text-2xl text-emerald-600 mb-8 animate-fade-in delay-200">
+        <h2 className="text-lg md:text-2xl text-primary/80 mb-8 animate-fade-in delay-200">
           A Complete Course on the Stock Market
         </h2>
         
@@ -28,12 +28,12 @@ export const HeroSection = () => {
             { value: "20+", label: "Comprehensive Modules" },
             { value: "1 Year", label: "Course Validity" }
           ].map((stat, index) => (
-            <Card key={index} className="bg-emerald-50 border-emerald-200 hover:shadow-lg transition-all duration-300 hover:scale-105 transform hover:bg-emerald-100 group">
+            <Card key={index} className="bg-card border-border hover:shadow-lg transition-all duration-300 hover:scale-105 transform hover:bg-accent group">
               <CardContent className="p-4 text-center">
-                <div className="text-xl md:text-2xl font-bold text-emerald-700 group-hover:text-emerald-800 transition-colors duration-300">
+                <div className="text-xl md:text-2xl font-bold text-primary group-hover:text-primary/90 transition-colors duration-300">
                   {stat.value}
                 </div>
-                <div className="text-xs md:text-sm text-emerald-600 group-hover:text-emerald-700 transition-colors duration-300">
+                <div className="text-xs md:text-sm text-muted-foreground group-hover:text-foreground transition-colors duration-300">
                   {stat.label}
                 </div>
               </CardContent>
@@ -41,7 +41,7 @@ export const HeroSection = () => {
           ))}
         </div>
         
-        <div className="text-base md:text-lg text-emerald-700 mb-8 font-semibold animate-pulse">
+        <div className="text-base md:text-lg text-primary mb-8 font-semibold animate-pulse">
           Language: Hindi
         </div>
       </div>
